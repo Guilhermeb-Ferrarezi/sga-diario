@@ -1,0 +1,44 @@
+{
+  "name": "diario-sga",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "generate-og": "tsx scripts/generate-og.tsx",
+    "prebuild": "bun run generate-og"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.0",
+    "lucide-react": "^0.460.0",
+    "tw-animate-css": "^1.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@fontsource/barlow-condensed": "^5.1.0",
+    "@fontsource/inter": "^5.1.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "jsdom": "^25.0.1",
+    "satori": "^0.10.14",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  }
+}
