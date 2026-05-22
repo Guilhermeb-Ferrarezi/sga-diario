@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "generate-og": "tsx scripts/generate-og.tsx",
-    "prebuild": "bun run generate-og"
+    "prebuild": "npm run generate-og"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
