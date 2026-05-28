@@ -14,25 +14,25 @@ export function Prize() {
               <span className="text-primary">sem enrolação.</span>
             </>
           }
-          sub="R$5 por jogador. O vencedor leva tudo. O foco é a experiência — o prêmio é bônus."
+          sub={`R$${CONFIG.PREMIACAO_TOTAL.toLocaleString('pt-BR')} em premiação. Inscrição R$${CONFIG.INSCRICAO} por time. O foco é a experiência — o prêmio é bônus.`}
         />
 
         <div className="mt-14 grid md:grid-cols-3 gap-px bg-border">
           <PrizeCard
-            label="Taxa por jogador"
-            value={`R$${CONFIG.TAXA_JOGADOR}`}
-            sub="Cada jogador paga individualmente"
+            label="2º lugar"
+            value={`R$${CONFIG.PREMIO_2}`}
+            sub="Vice-campeão"
           />
           <PrizeCard
-            label="Por time completo"
-            value={`R$${CONFIG.TAXA_JOGADOR * 5}`}
-            sub="5 jogadores · R$5 cada"
+            label="1º lugar"
+            value={`R$${CONFIG.PREMIO_1}`}
+            sub="Time campeão"
             highlight
           />
           <PrizeCard
-            label="Time vencedor"
-            value={`R$${CONFIG.PREMIACAO}`}
-            sub="Prêmio para o time campeão do dia"
+            label="3º lugar"
+            value={CONFIG.PREMIO_3}
+            sub="Garante presença na próxima edição"
           />
         </div>
 
@@ -55,15 +55,17 @@ function PrizeCard({
   sub: string
   highlight?: boolean
 }) {
+  // Valores longos (ex.: "Vaga para o próximo campeonato") usam fonte menor
+  const isLong = value.length > 8
   return (
     <div
-      className={`bracket p-9 text-center ${highlight ? 'bg-primary/[0.07] border border-primary/35' : 'glass'}`}
+      className={`bracket p-9 text-center flex flex-col justify-center ${highlight ? 'bg-primary/[0.07] border border-primary/35' : 'glass'}`}
     >
       <div className="text-display text-xs tracking-[0.2em] text-muted-foreground mb-2">
         {label.toUpperCase()}
       </div>
       <div
-        className={`text-display font-bold text-4xl md:text-5xl leading-none mb-4 ${highlight ? 'text-primary text-glow' : 'text-foreground'}`}
+        className={`text-display font-bold leading-none mb-4 ${isLong ? 'text-2xl md:text-3xl' : 'text-4xl md:text-5xl'} ${highlight ? 'text-primary text-glow' : 'text-foreground'}`}
       >
         {value}
       </div>

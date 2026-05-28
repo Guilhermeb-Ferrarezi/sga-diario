@@ -23,7 +23,7 @@ export function Hero() {
           {/* Pill badge */}
           <div className="inline-flex items-center gap-2 text-display text-xs tracking-[0.2em] text-primary mb-6 border border-primary/40 px-3.5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-glow" />
-            VALORANT · TODO DIA
+            VALORANT · CAMPEONATO 12/07
           </div>
 
           {/* Title */}
@@ -35,7 +35,7 @@ export function Hero() {
 
           {/* Subtitle */}
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed normal-case">
-            Jogue ao vivo, toda noite. Narrador, comentarista e HUD profissional em cada partida — com ou sem time formado.
+Campeonato ao vivo com 32 times. Narrador, comentarista e HUD profissional em cada partida — com ou sem time formado.
           </p>
 
           {/* No-team highlight */}
@@ -59,10 +59,10 @@ export function Hero() {
 
       {/* Stats bar */}
       <div className="relative z-[2] w-full bg-border grid grid-cols-2 md:grid-cols-4 gap-px border-t border-border">
-        <StatItem label="Próxima edição" value={`${CONFIG.PROXIMA_EDICAO} · ${CONFIG.HORARIO}`} sub="dias úteis" />
-        <StatItem label="Taxa" value={`R$${CONFIG.TAXA_JOGADOR}`} sub="por jogador" highlight />
-        <StatItem label="Formato" value={`${CONFIG.TIMES_POR_DIA} times`} sub="MD1 — mata-mata" />
-        <StatItem label="Vagas restantes" value={String(CONFIG.VAGAS_RESTANTES)} sub="vagas limitadas" />
+        <StatItem label="Data prevista" value={`${CONFIG.PREVISAO} · ${CONFIG.HORARIO}`} sub="vagas limitadas" />
+        <StatItem label="Inscrição" value={`R$${CONFIG.INSCRICAO}`} sub="por time" highlight />
+        <StatItem label="Formato" value={`${CONFIG.TIMES} times`} sub="MD1 — mata-mata" />
+        <StatItem label="Premiação" value={`R$${CONFIG.PREMIACAO_TOTAL.toLocaleString('pt-BR')}`} sub={`campeão leva R$${CONFIG.PREMIO_1}`} />
       </div>
     </section>
   )

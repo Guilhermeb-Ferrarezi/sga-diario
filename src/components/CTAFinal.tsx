@@ -29,9 +29,9 @@ export function CTAFinal() {
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-6 normal-case">
-            Próxima edição: <strong className="text-foreground">{CONFIG.PROXIMA_EDICAO} às {CONFIG.HORARIO}</strong>
+            Data prevista: <strong className="text-foreground">{CONFIG.PREVISAO} às {CONFIG.HORARIO}</strong>
             {' · '}
-            <strong className="text-primary">restam {CONFIG.VAGAS_RESTANTES} vagas</strong>
+            <strong className="text-primary">{CONFIG.TIMES} times · R${CONFIG.PREMIACAO_TOTAL.toLocaleString('pt-BR')} em prêmios</strong>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
@@ -40,7 +40,7 @@ export function CTAFinal() {
           </div>
 
           <div className="text-mono text-xs tracking-widest text-muted-foreground">
-            R${CONFIG.TAXA_JOGADOR}/JOGADOR · {CONFIG.PROXIMA_EDICAO} · {CONFIG.HORARIO} · MD1
+            R${CONFIG.INSCRICAO}/TIME · {CONFIG.PREVISAO} · {CONFIG.HORARIO} · MD1
           </div>
         </div>
       </section>

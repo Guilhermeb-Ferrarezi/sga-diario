@@ -1,10 +1,10 @@
 const items = [
   'Transmissão ao vivo',
   'Narrador e comentarista',
-  'Live profissional todos os dias',
+  'Live profissional',
   'Formação de time gratuita',
   'Ranking e histórico SGA',
-  'R$5 por jogador',
+  '32 times · R$1.000 em prêmios',
   'MD1 — mata-mata',
   'Capa e HUD personalizados',
 ]
