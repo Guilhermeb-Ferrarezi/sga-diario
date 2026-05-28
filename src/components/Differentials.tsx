@@ -28,8 +28,8 @@ const features = [
   },
   {
     n: '06',
-    t: '32 times no mata-mata',
-    d: 'Chaveamento completo com 32 times em MD1. R$1.000 em premiação e vaga garantida para o campeão da próxima edição.',
+    t: 'Todo dia, todo noite',
+    d: 'Não é um campeonato com data única. Acontece todo dia. Jogue quando puder e volte quando quiser.',
   },
 ]
 

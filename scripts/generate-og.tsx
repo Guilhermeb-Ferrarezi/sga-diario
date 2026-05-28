@@ -143,7 +143,7 @@ const element = (
           fontWeight: 600,
         }}
       >
-        VALORANT · CAMPEONATO 12/07
+        VALORANT · TODO DIA
       </div>
 
       {/* Title row */}
@@ -223,7 +223,7 @@ const element = (
             fontWeight: 600,
           }}
         >
-          Data prevista: 12/07 às 18h · 32 times
+          Próxima edição: 28/05 às 18h
         </span>
       </div>
     </div>
